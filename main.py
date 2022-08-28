@@ -53,7 +53,7 @@ def get_words():
     return get_words()
   return words.json()['data']['text']
 def tips():
-  tips = requests.get("http://api.tianapi.com/healthtip/?key=d34ae292813548f103dd93516d0ba127")
+  tips = requests.get("http://api.tianapi.com/healthtip/ ?key=d34ae292813548f103dd93516d0ba127")
   if tips.status_code != 200:
     return tips()
   return tips.json()["newslist"][0]['content']
