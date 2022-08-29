@@ -15,8 +15,8 @@ app_secret = os.environ["APP_SECRET"]
 
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
-birthday_B = "08-31"
-o_w = "又是爱你的一天"
+birthday_B = "10-28"
+o_w = "又是爱你的一天 宝贝"
 cz = "倩倩"
 
 def get_weather():
@@ -53,7 +53,7 @@ def get_words():
     return get_words()
   return words.json()['data']['text']
 def tips():
-  tips = requests.get("http://api.tianapi.com/healthtip/ ?key=d34ae292813548f103dd93516d0ba127")
+  tips = requests.get("http://api.tianapi.com/healthtip/?key=d34ae292813548f103dd93516d0ba127")
   if tips.status_code != 200:
     return tips()
   return tips.json()["newslist"][0]['content']
